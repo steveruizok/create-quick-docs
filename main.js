@@ -22,7 +22,6 @@ function handleStart() {
 }
 
 function handleComplete() {
-	log(`Docs cloned!`)
 	installDependencies()
 
 	clear()
@@ -43,15 +42,32 @@ function handleComplete() {
 
 // Install dependencies in project folder
 function installDependencies() {
-	log('Installing dependencies – this may take a minute')
-	execSync(`cd ${dir} && npm i`)
+	log('Installing dependencies – this may take a minute...')
+	execSync(`cd ${dir} && npm i && rm -rf .git`)
 }
 
 // Clone repository into project folder
 async function cloneRepo() {
-	log(`Cloning repo into ${dir}`)
-	if (fs.existsSync(dir)) {
-		err(`Oops, that directory (${dir}) already exists.`)
+	let hasError = false
+
+	log(`Cloning repo into ${dir}...`)
+	if (dir) {
+		if (fs.existsSync(dir)) {
+			fs.readdir(dir, (err, files) => {
+				if (err && !files) {
+					console.error('Error: Could not read from that directory.')
+					hasError = true
+				} else {
+					if (files.length > 0) {
+						console.error('Error: That directory is not empty.')
+						hasError = true
+					}
+				}
+			})
+		}
+	}
+
+	if (hasError) {
 		return
 	}
 

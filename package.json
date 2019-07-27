@@ -4,7 +4,7 @@
 	"author": "Steve Ruiz <steveruizok@gmail.com>",
 	"description": "Create a static site for your docs, quick.",
 	"repository": "https://github.com/steveruizok/create-quick-docs",
-	"version": "0.0.6",
+	"version": "0.0.18",
 	"license": "MIT",
 	"dependencies": {
 		"@types/chalk": "^2.2.0",
