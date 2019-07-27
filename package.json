@@ -1,0 +1,17 @@
+{
+	"bin": "main.js",
+	"name": "quick-docs",
+	"author": "steveruizok",
+	"description": "Quickly spin up a docs static site.",
+	"author": "Steve Ruiz <steveruizok@gmail.com>",
+	"repository": "https://github.com/steveruizok/create-quick-docs",
+	"version": "1.0.0",
+	"license": "MIT",
+	"dependencies": {
+		"@types/chalk": "^2.2.0",
+		"@types/ora": "^3.2.0",
+		"chalk": "^2.4.2",
+		"git-clone": "^0.1.0",
+		"ora": "^3.4.0"
+	}
+}

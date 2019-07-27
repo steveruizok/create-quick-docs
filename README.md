@@ -1,2 +1,6 @@
-# create-quick-docs
- Create docs, quick.
+# snap-docs
+## Quickly spin up a docs static site.
+run:
+```
+npx snap-docs
+```
