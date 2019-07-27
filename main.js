@@ -25,7 +25,7 @@ function handleComplete() {
 	installDependencies()
 
 	clear()
-	log(`Docs ready at bold(/${dir})!`)
+	log(`Docs ready at ${bold(`/${dir}`)}!`)
 	log(``)
 	log(bold(`Editing:`))
 	log(`✦ Create your site's content in the ${bold(`content`)} folder.`)
